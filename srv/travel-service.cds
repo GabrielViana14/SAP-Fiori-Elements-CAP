@@ -37,6 +37,9 @@ service TravelService @(path:'/processor') {
     action createTravelByTemplate() returns Travel;
     action rejectTravel();
     action acceptTravel();
+
+    // Novo
+    action deductDiscount(@(UI.ParameterDefaultValue: 5)percent: Percentage not null @Mandatory ) returns Travel
   };
 
   // Passenger: Add joined property 'FullName' and association 'to_Booking'
