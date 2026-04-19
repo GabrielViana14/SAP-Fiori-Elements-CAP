@@ -98,3 +98,12 @@ annotate Travel with @(
     Deletable : TravelStatus.insertDeleteRestriction
   }
 );
+
+@odata.singleton
+entity SupplementScope {
+  MinimumValue : Integer @Common.Label: 'MinimumValue';
+  MaximumValue : Integer @Common.Label: 'MaximumValue';
+  TargetValue  : Integer @Common.Label: 'Target Value';
+  DeviationRangeLowValue : Integer @Common.Label: 'Deviation Range Threshold';
+  ToleranceRangeLowValue : Integer @Common.Label: 'Tolerance Range Threshold';
+}
